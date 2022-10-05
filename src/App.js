@@ -43,6 +43,11 @@ function App() {
       <section className="skills" id="skills">
         <div className="wrapper">
           <h2>Skills & Tools</h2>
+          <div className="skills__list">
+            <div className="skills__item">
+              
+            </div>
+          </div>
         </div>
       </section>
     </div>
