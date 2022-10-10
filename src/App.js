@@ -1,4 +1,5 @@
 import Canvas from "./components/Canvas";
+import Skills from "./components/Skills";
 function App() {
   return (
     <div className="App">
@@ -28,7 +29,7 @@ function App() {
           <h2>About</h2>
           <div className="about__container">
             <div className="container__img">
-              <img src="/img/profile-vlad.jpg" alt="Vlad Nikitin photo" />
+              <img src="/img/profile-vlad.jpg" alt="cv" />
             </div>
             <div className="container__text">
               <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, non!</h3>
@@ -40,16 +41,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="skills" id="skills">
-        <div className="wrapper">
-          <h2>Skills & Tools</h2>
-          <div className="skills__list">
-            <div className="skills__item">
-              
-            </div>
-          </div>
-        </div>
-      </section>
+      <Skills />
     </div>
   );
 }
