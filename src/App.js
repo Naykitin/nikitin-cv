@@ -1,5 +1,6 @@
 import Canvas from "./components/Canvas";
 import Skills from "./components/Skills";
+import Work from "./components/Work";
 function App() {
   return (
     <div className="App">
@@ -41,7 +42,19 @@ function App() {
           </div>
         </div>
       </section>
-      <Skills />
+      <section className="skills" id="skills">
+        <div className="wrapper">
+          <h2>Skills & Tools</h2>
+          <Skills />
+        </div>
+    </section>
+    <section className="work" id="work">
+      <div className="wrapper">
+        <h2>Work</h2>
+        <p className="work__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a iste repellat officia iure assumenda consequatur adipisci hic voluptatibus illo!</p>
+        <Work />
+      </div>
+    </section>
     </div>
   );
 }

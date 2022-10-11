@@ -121,3 +121,64 @@ ul {
     }
   }
 }
+.skills {
+  padding: 2rem 0;
+  .skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    .skills__item {
+      display: flex;
+      flex-direction: column;
+      width: 18%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+.work {
+  padding: 2rem 0;
+  .work__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+
+    .work__item {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 100%;
+
+      .item__text {
+        width: 60%;
+
+        .item__btns {
+          display: flex;
+          gap: 1rem;
+          a {
+            padding: 1rem;
+            border: 2px solid silver
+          }
+        }
+      }
+      .item__img {
+        width: calc(40% - 2rem);
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .work__item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
