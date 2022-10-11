@@ -54,8 +54,8 @@ function Work() {
                      <h3>{obj.heading}</h3>
                      <p>{obj.description}</p>
                      <div className="item__btns">
-                        <a href={obj.link}>View site</a>
-                        <a href={obj.github}>View GitHub</a>
+                        <a href={obj.link} target="_blank">View site</a>
+                        <a href={obj.github} target="_blank">View GitHub</a>
                      </div>
                   </div>
                   <div className="item__img">
