@@ -11,6 +11,7 @@ function App() {
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -54,6 +55,13 @@ function App() {
         <p className="work__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a iste repellat officia iure assumenda consequatur adipisci hic voluptatibus illo!</p>
         <Work />
       </div>
+    </section>
+    <section className="contact" id="contact">
+      <div className="wrapper">
+        <h2>Contact</h2>
+        <p className="contact__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque error temporibus praesentium, voluptas reprehenderit cumque impedit molestiae dolore natus?</p> 
+      </div>
+      
     </section>
     </div>
   );

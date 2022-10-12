@@ -7,7 +7,7 @@ function Work() {
          id: 1,
          heading: 'Sneakers store',
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel.',
-         link: '',
+         link: '../sneakers/index.html',
          github: 'https://github.com/Naykitin/sneakers-store',
          image: ['/img/sneakers-store-1.png', '/img/sneakers-store-1.png']
       },
@@ -54,8 +54,8 @@ function Work() {
                      <h3>{obj.heading}</h3>
                      <p>{obj.description}</p>
                      <div className="item__btns">
-                        <a href={obj.link} target="_blank">View site</a>
-                        <a href={obj.github} target="_blank">View GitHub</a>
+                        <a href={obj.link} target="_blank" rel="noreferrer">View site</a>
+                        <a href={obj.github} target="_blank" rel="noreferrer">View GitHub</a>
                      </div>
                   </div>
                   <div className="item__img">
