@@ -61,7 +61,7 @@ function Skills() {
       {
          skillItems.map((obj) => (
             <div className="skills__item" key={obj.id}>
-               <FontAwesomeIcon icon={obj.icon} size="5x"/>
+               <FontAwesomeIcon icon={obj.icon} size="4x"/>
                <h3>{obj.text}</h3>
             </div>
          ))

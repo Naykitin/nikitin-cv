@@ -1,6 +1,9 @@
 import Canvas from "./components/Canvas";
+import ContactForm from "./components/ContactForm";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 function App() {
   return (
     <div className="App">
@@ -59,7 +62,19 @@ function App() {
     <section className="contact" id="contact">
       <div className="wrapper">
         <h2>Contact</h2>
-        <p className="contact__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque error temporibus praesentium, voluptas reprehenderit cumque impedit molestiae dolore natus?</p> 
+        <p className="contact__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque error temporibus praesentium, voluptas reprehenderit cumque impedit molestiae dolore natus?</p>
+        <div className="contact__wrapper">
+          <div className="contact__form">
+            <ContactForm />
+          </div>
+          <div className="contact__social">
+            <p>Also, you can find me here!</p>
+            <div className="social__links">
+              <a href="https://t.me/naykitin" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTelegram} size="2x"/></a>
+              <a href="https://www.linkedin.com/in/nikitin-vladyslav/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
+            </div>
+          </div>
+        </div>
       </div>
       
     </section>

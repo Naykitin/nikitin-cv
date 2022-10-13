@@ -216,3 +216,47 @@ ul {
     }
   }
 }
+.contact {
+  padding: 3% 0;
+
+  .contact__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .contact__form {
+      width: calc(50% - 1rem);
+      min-width: 400px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        gap: .5rem;
+
+        input {
+          width: 95%;
+          height: 2rem;
+        }
+        textarea {
+          width: 95%;
+        }
+      }
+    }
+    .contact__social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: calc(50% - 1rem);
+      min-width: 400px;
+
+      .social__links {
+        display: flex;
+        gap: .5rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
