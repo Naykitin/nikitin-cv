@@ -64,9 +64,7 @@ function App() {
         <h2>Contact</h2>
         <p className="contact__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque error temporibus praesentium, voluptas reprehenderit cumque impedit molestiae dolore natus?</p>
         <div className="contact__wrapper">
-          <div className="contact__form">
-            <ContactForm />
-          </div>
+          <ContactForm />
           <div className="contact__social">
             <p>Also, you can find me here!</p>
             <div className="social__links">

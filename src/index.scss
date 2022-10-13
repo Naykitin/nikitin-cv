@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 code {
@@ -37,6 +38,10 @@ a {
 ul {
   list-style: none;
   margin: 0;
+}
+input,
+textarea {
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -228,22 +233,53 @@ ul {
     .contact__form {
       width: calc(50% - 1rem);
       min-width: 400px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: .5s transform;
 
       form {
         display: flex;
         flex-direction: column;
         // align-items: center;
         gap: .5rem;
+        padding: 1rem;
+        background-color: aqua;
 
         input {
-          width: 95%;
+          width: 100%;
           height: 2rem;
         }
         textarea {
-          width: 95%;
+          width: 100%;
         }
       }
+      .form__back {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid silver;
+        transform: translateZ(-1px) rotateY(180deg);
+        transition: .5s transform;
+      }
+      
     }
+    .contact__form.active {
+      transform: rotateY(180deg);
+
+      .form__front {
+        pointer-events: none;
+      }
+      .form__back{
+        transform: translateZ(0) rotateY(180deg);
+      }
+    }
+  }
     .contact__social {
       display: flex;
       flex-direction: column;
@@ -259,4 +295,3 @@ ul {
       }
     }
   }
-}
