@@ -11,11 +11,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   box-sizing: border-box;
+  background-color: #454545;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1, h2, h3, h4, p, a, li, label, input, textarea {
+  color: #fff;
+}
+input, textarea {
+  border: none;
+  border-bottom: 2px solid silver;
+}
+input:focus, 
+textarea:focus {
+  border-bottom: 2px solid #3d838e;
+  outline: none;
 }
 h1 {
   color: #fff;
@@ -104,7 +117,6 @@ textarea {
 }
 
 .about {
-  background-color: rgb(207, 227, 254);
   padding: 2rem 0;
 
   .about__container {
@@ -162,6 +174,10 @@ textarea {
       min-width: 10rem;
       align-items: center;
       text-align: center;
+
+      svg {
+        color: #fff;
+      }
     }
   }
 }
@@ -240,17 +256,34 @@ textarea {
       form {
         display: flex;
         flex-direction: column;
-        // align-items: center;
-        gap: .5rem;
+        gap: 2rem;
         padding: 1rem;
-        background-color: aqua;
+        background-color: #454545;
 
+        div {
+          position: relative;
+        }
         input {
-          width: 100%;
           height: 2rem;
         }
+        label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s all;
+        }
+        input,
         textarea {
           width: 100%;
+          background-color: transparent;
+          z-index: 9;
+        }
+        input:focus + label,
+        textarea:focus + label {
+          top: -1rem;
+        }
+        input:valid + label {
+          top: -1rem;
         }
       }
       .form__back {
@@ -258,14 +291,24 @@ textarea {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: white;
-        border: 1px solid silver;
+        background-color: #454545;
         transform: translateZ(-1px) rotateY(180deg);
         transition: .5s transform;
+
+        button {
+          background: transparent;
+          border: 2px solid silver;
+          font-size: 1rem;
+          color: #fff;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+        }
       }
       
     }

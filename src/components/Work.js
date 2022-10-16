@@ -31,8 +31,8 @@ function Work() {
          id: 4,
          heading: 'Sneakers store',
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel.',
-         link: '',
-         github: 'https://github.com/Naykitin/sneakers-store',
+         link: '/todolist/index.html',
+         github: 'https://github.com/Naykitin/to-do-list',
          image: ['/img/sneakers-store-1.png']
       }
    ];

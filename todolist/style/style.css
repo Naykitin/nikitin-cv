@@ -1,0 +1,122 @@
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100vw;
+   min-height: 100vh;
+   background: linear-gradient(#e66465, #9198e5);
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   width: 450px;
+   min-height: 200px;
+   padding: 10px;
+   margin: 0 10px;
+   background: #ffffff29;
+   border-radius: 20px;
+}
+h1 {
+   color: #fff;
+}
+form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   width: 100%;
+}
+input {
+   width: 90%;
+   height: 40px;
+   border-radius: 10px;
+   border: none;
+   padding-left: 10px;
+   font-size: 16px;
+   outline:none;
+}
+button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 30px;
+   width: 30px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.submit {
+   position: absolute;
+   top: 50%;
+   right: 8%;
+   transform: translate(0px, -50%);
+   background: #6100ff;
+}
+.deleteBtn {
+   margin-right: 3.5%;
+   background: #fd4242;
+}
+
+.submit > span {
+   position: relative;;
+   width: 25px;
+   height: 2px;
+   background: #fff;
+}
+.submit > span::before {
+   position: absolute;
+   content: "";
+   top: 0px;
+   left: 0px;
+   transform: rotate(90deg);
+   width: 18px;
+   height: 2px;
+   background: #fff;
+}
+.deleteBtn > span {
+   position: relative;;
+   width: 25px;
+   height: 2px;
+   transform: rotate(45deg);
+   background: #fff;
+}
+.deleteBtn > span::before {
+   position: absolute;
+   content: "";
+   top: 0px;
+   left: 0px;
+   transform: rotate(90deg);
+   width: 18px;
+   height: 2px;
+   background: #fff;
+}
+ul {
+   display: flex;
+   list-style: none;
+   padding: 0;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+ul > li {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 5px 0;
+   padding: 0 5px;
+   background: #fff;
+   width: 90%;
+   height: 40px;
+   border-radius: 10px;
+   overflow-y: scroll;
+}

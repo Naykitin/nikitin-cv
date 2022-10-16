@@ -8,8 +8,8 @@ const ContactForm = () => {
    const [name, setName] = useState();
    const [emailDirty, setEmailDirty] = useState(false);
    const [nameDirty, setNameDirty] = useState(false);
-   const [emailError, setEmailError] = useState('Email can not be empty');
-   const [nameError, setNameError] = useState('Name can not be empty');
+   const [emailError, setEmailError] = useState("Email can't be empty");
+   const [nameError, setNameError] = useState("Name can't be empty");
    const [formValid, setFormValid] = useState(false);
    const [result, setResult] = useState();
    const [flip, setFlip] = useState(false);
@@ -72,14 +72,19 @@ const ContactForm = () => {
   return (
    <div className={`contact__form ${flip ? 'active': ''}`}>
       <form ref={form} onSubmit={sendEmail} className="form__front">
-         {(nameDirty && nameError) ? <div style={{color: 'red'}}>{nameError}</div> : <label>Name</label>}
-         <input onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} type="text" name="user_name" />
-         
-         {(emailDirty && emailError) ? <div style={{color: 'red'}}>{emailError}</div> : <label>Email</label>}
-         <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} type="email" name="user_email" />
-         <label>Message</label>
-         <textarea name="message" rows="6" />
-         <input disabled={!formValid} type="submit" value="Send" />
+         <div>
+            <input onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} type="text" name="user_name" required />
+            {(nameDirty && nameError) ? <label style={{color: 'red'}}>{nameError}</label> : <label>Name</label>}
+         </div>
+         <div>
+            <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} type="email" name="user_email" required />
+            {(emailDirty && emailError) ? <label style={{color: 'red'}}>{emailError}</label> :  <label>Email</label>}
+         </div>
+         <div>
+            <textarea name="message" rows="6" />
+            <label>Message</label>
+         </div>
+         <button disabled={!formValid} type="submit" >Send</button>
       </form>
       <div className="form__back">
          <p>{result}</p>
