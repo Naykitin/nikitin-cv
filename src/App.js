@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Navbar from "./components/Navbar";
 import Scroll from "./components/Scroll";
+
 function App() {
   return (
     <div className="App">
@@ -13,18 +14,8 @@ function App() {
         <Navbar />
       </header>
       <Scroll />
-      <section className="hero" id="home">
-        <div className="wrapper">
-          <div className="hero__text">
-            <h1>
-              <span>Hi, I'm Vlad Nikitin!✋</span>
-              <span>Web developer 💻</span>
-            </h1>
-          </div>
-        </div>
-        <Canvas/>
-      </section>
-      <section className="about" id="about">
+
+      {/* <section className="about" id="about">
         <div className="wrapper">
           <h2>About</h2>
           <div className="about__container">
@@ -40,13 +31,14 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="skills" id="skills">
+      </section> */}
+
+    {/* <section className="skills" id="skills">
         <div className="wrapper">
           <h2>Skills & Tools</h2>
           <Skills />
         </div>
-    </section>
+    </section> */}
     <section className="work" id="work">
       <div className="wrapper">
         <h2>Work</h2>

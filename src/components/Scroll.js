@@ -1,6 +1,7 @@
 import React from 'react'
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 import Canvas from './Canvas';
+import Skills from './Skills';
 
 function Scroll() {
 
@@ -9,60 +10,66 @@ function Scroll() {
 
   return (
    <ScrollContainer>
-      <ScrollPage page={1}>
+
+      <ScrollPage>
          <section class="hero" id="home"> 
-            <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -300))}>
                <h1>
                   <span>Hi, I'm Vlad Nikitin!✋</span>
                   <span>Web developer 💻</span>
                </h1>
             </Animator>
+            <Canvas/>
          </section>
       </ScrollPage>
 
-      <ScrollPage page={2}>
-      <Animator animation={ZoomInScrollOut}>
-         <h2>A little bit about myself 🧐</h2>
-      </Animator>
+      <ScrollPage>
+         <Animator animation={ZoomInScrollOut}>
+            <h3>A little bit about myself 🧐</h3>
+         </Animator>
       </ScrollPage>
       
       <ScrollPage>
-      <Animator animation={FadeUp}>
-         <section className="about" id="about">
-            <div className="about__container">
-               <div className="container__img">
-               <img src="/img/profile-vlad.jpg" alt="cv" />
+         <Animator animation={FadeUp}>
+            <section className="about" id="about">
+               <div className="about__container">
+                  <div className="container__img">
+                  <Animator animation={batch(MoveIn(0, 1000), MoveOut(0, -1000))}>
+                     <img src="/img/profile-vlad.jpg" alt="cv" />
+                  </Animator>
+                  </div>
+                  <div className="container__text">
+                     <Animator animation={MoveIn(-1000, 0)}>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde odio modi error ipsa esse sapiente ducimus ea! Minima, quod?</p>
+                     </Animator>
+
+                     <Animator animation={MoveIn(1000, 0)}>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum, voluptatibus sit quasi accusamus laudantium facere illum explicabo architecto. Numquam, earum.</p>
+                     </Animator>
+
+                     <Animator animation={MoveOut(1000, 0)}> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, repudiandae.</p>
+                     </Animator>
+
+                     <Animator animation={MoveOut(-1000, 0)}>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur minima. Eius fugit rerum totam, non quo et itaque necessitatibus eos nemo! Qui dicta earum aspernatur, odio amet sed nobis. Quasi enim, quibusdam possimus mollitia quos molestias natus illum, velit ad eum sequi unde! Ad iusto nisi odio quibusdam id.</p>
+                     </Animator>
+
+                  </div>
                </div>
-               <div className="container__text">
-               <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, non!</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde odio modi error ipsa esse sapiente ducimus ea! Minima, quod?</p>
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum, voluptatibus sit quasi accusamus laudantium facere illum explicabo architecto. Numquam, earum.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, repudiandae.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur minima. Eius fugit rerum totam, non quo et itaque necessitatibus eos nemo! Qui dicta earum aspernatur, odio amet sed nobis. Quasi enim, quibusdam possimus mollitia quos molestias natus illum, velit ad eum sequi unde! Ad iusto nisi odio quibusdam id.</p>
+            </section>
+         </Animator>
+      </ScrollPage>
+
+      <ScrollPage>
+         <section className="skills" id="skills">
+            <Animator animation={batch(Fade(), MoveIn(0, 1000), MoveOut(0, -500), Sticky())}>
+               <div className="wrapper">
+                  <h2>Skills & Tools</h2>
+                  <Skills />
                </div>
-            </div>
+            </Animator>
          </section>
-      </Animator>
-      </ScrollPage>
-      <ScrollPage>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
-         <span style={{ fontSize: "40px" }}>
-            <Animator animation={MoveIn(-1000, 0)}>Hello Guys 👋🏻</Animator>
-            <Animator animation={MoveIn(1000, 0)}>Nice to meet you 🙋🏻‍♀️</Animator>
-            - I'm Dante Chun -
-            <Animator animation={MoveOut(1000, 0)}>Good bye ✋🏻</Animator>
-            <Animator animation={MoveOut(-1000, 0)}>See you 💛</Animator>
-         </span>
-      </div>
-      </ScrollPage>
-      <ScrollPage>
-      <Animator animation={batch(Fade(), Sticky())}>
-         <span style={{ fontSize: "40px" }}>Done</span>
-         <br/>
-         <span style={{ fontSize: "30px" }}>
-            There's FadeAnimation, MoveAnimation, StickyAnimation, ZoomAnimation
-         </span>
-      </Animator>
       </ScrollPage>
    </ScrollContainer>
   )
