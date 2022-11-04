@@ -1,6 +1,4 @@
-import Canvas from "./components/Canvas";
 import ContactForm from "./components/ContactForm";
-import Skills from "./components/Skills";
 import Work from "./components/Work";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -15,30 +13,6 @@ function App() {
       </header>
       <Scroll />
 
-      {/* <section className="about" id="about">
-        <div className="wrapper">
-          <h2>About</h2>
-          <div className="about__container">
-            <div className="container__img">
-              <img src="/img/profile-vlad.jpg" alt="cv" />
-            </div>
-            <div className="container__text">
-              <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, non!</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde odio modi error ipsa esse sapiente ducimus ea! Minima, quod?</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum, voluptatibus sit quasi accusamus laudantium facere illum explicabo architecto. Numquam, earum.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, repudiandae.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur minima. Eius fugit rerum totam, non quo et itaque necessitatibus eos nemo! Qui dicta earum aspernatur, odio amet sed nobis. Quasi enim, quibusdam possimus mollitia quos molestias natus illum, velit ad eum sequi unde! Ad iusto nisi odio quibusdam id.</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-    {/* <section className="skills" id="skills">
-        <div className="wrapper">
-          <h2>Skills & Tools</h2>
-          <Skills />
-        </div>
-    </section> */}
     <section className="work" id="work">
       <div className="wrapper">
         <h2>Work</h2>
@@ -46,6 +20,7 @@ function App() {
         <Work />
       </div>
     </section>
+    
     <section className="contact" id="contact">
       <div className="wrapper">
         <h2>Contact</h2>

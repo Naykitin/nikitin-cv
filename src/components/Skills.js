@@ -32,26 +32,21 @@ function Skills() {
       },
       {
          id: 6,
-         icon: faReact,
-         text: 'React'
-      },
-      {
-         id: 7,
          icon: faSass,
          text: 'Sass'
       },
       {
-         id: 8,
+         id: 7,
          icon: faPhp,
          text: 'PHP'
       },
       {
-         id: 9,
+         id: 8,
          icon: faWordpress,
          text: 'Wordpress'
       },
       {
-         id: 10,
+         id: 9,
          icon: faCode,
          text: 'VsCode'
       }
