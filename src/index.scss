@@ -94,6 +94,50 @@ textarea {
       color: #fff;
     }
   }
+  .brg {
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: .5rem 1rem .5rem auto;
+    transition: .2s all;
+  }
+  .brg:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 8px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transition: .2s all;
+  }
+  .brg:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -8px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transition: .2s all;
+  }
+  .brg.active {
+    background: transparent;
+  }
+  .brg.active:before {
+    width: 23px;
+    transform: rotate(-45deg);
+    transform-origin: center left;
+  }
+  .brg.active:after {
+    width: 23px;
+    transform: rotate(45deg);
+    transform-origin: center left;
+  }
 }
 @media (max-width: 768px) {
   .app__header {
@@ -112,6 +156,9 @@ textarea {
     }
     ul.active {
       left: 0;
+    }
+    .brg {
+      display: block;
     }
   }
 }

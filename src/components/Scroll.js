@@ -30,8 +30,9 @@ function Scroll() {
       </ScrollPage>
       
       <ScrollPage>
+         <div id="about"></div>
          <Animator animation={FadeUp}>
-            <section className="about" id="about">
+            <section className="about">
                <div className="about__container">
                   <div className="container__img">
                   <Animator animation={batch(MoveIn(0, -800), MoveOut(0, 800))}>
