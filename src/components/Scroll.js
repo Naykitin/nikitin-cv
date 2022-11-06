@@ -48,7 +48,7 @@ function Scroll() {
                         </Animator>
 
                         <Animator animation={MoveOut(-1000, 0)}>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur minima. Eius fugit rerum totam, non quo et itaque necessitatibus eos nemo! Qui dicta earum aspernatur, odio amet sed nobis. Quasi enim, quibusdam possimus mollitia quos molestias natus illum, velit ad eum sequi unde! Ad iusto nisi odio quibusdam id.</p>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur minima. Eius fugit rerum totam, non quo et itaque necessitatibus eos nemo!</p>
                         </Animator>
 
                         <Animator animation={MoveIn(-1000, 0)}>
@@ -56,7 +56,7 @@ function Scroll() {
                         </Animator>
 
                         <Animator animation={MoveIn(1000, 0)}>
-                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum, voluptatibus sit quasi accusamus laudantium facere illum explicabo architecto. Numquam, earum.</p>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum.</p>
                         </Animator>
 
                      </div>

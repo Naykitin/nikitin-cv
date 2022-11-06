@@ -42,6 +42,11 @@ h1 {
   color: #fff;
   font-size: 4rem;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 h2 {
   font-size: 2.2rem;
 }
@@ -221,7 +226,19 @@ textarea {
     }
   }
 }
+
 @media (max-width: 1021px) {
+  .about {
+    .about__container {
+      .container__img {
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
   .about {
     .about__container {
       .container__img,
@@ -299,7 +316,11 @@ textarea {
     padding: 0px 3%;
   }
 }
-
+.about__title {
+  h3 {
+    text-align: center;
+  }
+}
 
 
 

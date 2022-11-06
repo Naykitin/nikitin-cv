@@ -13,19 +13,19 @@ function Work() {
       },
       {
          id: 2,
-         heading: 'Sneakers store',
+         heading: 'Todo List',
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel.',
-         link: '',
-         github: 'https://github.com/Naykitin/sneakers-store',
-         image: ['/img/sneakers-store-1.png']
+         link: '/todolist/index.html',
+         github: 'https://github.com/Naykitin/to-do-list',
+         image: ['/img/todolist.png']
       },
       {
          id: 3,
-         heading: 'Sneakers store',
+         heading: 'Tictactoe',
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vel.',
-         link: '',
-         github: 'https://github.com/Naykitin/sneakers-store',
-         image: ['/img/sneakers-store-1.png']
+         link: '/tictactoe/index.html',
+         github: '',
+         image: ['/img/tictactoe.png']
       },
       {
          id: 4,
