@@ -150,7 +150,7 @@ textarea {
       flex-direction: column;
       justify-content: flex-start;
       height: 100vh;
-      background: blue;
+      background: rgb(44 34 153);
       padding: 4rem;
       transition: .4s all;
     }
@@ -182,8 +182,6 @@ textarea {
     }
   }
 
-  
-
   canvas {
     position: absolute;
     top: 0;
@@ -210,7 +208,6 @@ textarea {
 
     .container__img {
       width: 25%;
-      // min-width: 15rem;
 
       img {
         display: block;
@@ -241,18 +238,18 @@ textarea {
 }
 .skills {
   padding: 2rem 0;
+
   .skills__list {
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem;
+    gap: 10%;
     align-items: flex-start;
     justify-content: center;
 
     .skills__item {
       display: flex;
       flex-direction: column;
-      width: 18%;
-      min-width: 10rem;
+      width: max-content;
       align-items: center;
       text-align: center;
 
@@ -262,6 +259,49 @@ textarea {
     }
   }
 }
+@media (min-width: 425px) {
+  .about > div, 
+  .skills > div,
+  .about__title > div,
+  .hero > div {
+    width: calc(386px + 3%);
+    margin: 0px auto;
+    padding: 0px 3%;
+  }
+}
+@media (min-width: 768px) {
+  .about > div, 
+  .skills > div,
+  .about__title > div,
+  .hero > div {
+    width: calc(698px + 3%);
+    margin: 0px auto;
+    padding: 0px 3%;
+  }
+}
+@media (min-width: 1024px) {
+  .about > div, 
+  .skills > div,
+  .about__title > div,
+  .hero > div {
+    width: calc(930px + 3%);
+    margin: 0px auto;
+    padding: 0px 3%;
+  }
+}
+@media (min-width: 1395px) {
+  .about > div, 
+  .skills > div,
+  .about__title > div,
+  .hero > div {
+    width: calc(1280px + 3%);
+    margin: 0px auto;
+    padding: 0px 3%;
+  }
+}
+
+
+
 
 .work {
   padding: 2rem 0;
