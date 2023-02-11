@@ -4,8 +4,9 @@ import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
    const form = useRef();
-   const [email, setEmail] = useState();
+   const [email, setEmail] = useState('');
    const [name, setName] = useState();
+   const [textarea, setTextarea] = useState('');
    const [emailDirty, setEmailDirty] = useState(false);
    const [nameDirty, setNameDirty] = useState(false);
    const [emailError, setEmailError] = useState("Email can't be empty");
@@ -58,6 +59,10 @@ const ContactForm = () => {
       }
    }
 
+   const textareaHandler = (e) => {
+      setTextarea(e.target.value);
+   }
+
    const blurHandler = (e) => {
       switch(e.target.name) {
          case 'user_email':
@@ -77,11 +82,11 @@ const ContactForm = () => {
             {(nameDirty && nameError) ? <label style={{color: 'red'}}>{nameError}</label> : <label>Name</label>}
          </div>
          <div>
-            <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} type="email" name="user_email" required />
+            <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} type="email" name="user_email" className={`${email === '' ? 'empty' : 'notEmpty'}`} required />
             {(emailDirty && emailError) ? <label style={{color: 'red'}}>{emailError}</label> :  <label>Email</label>}
          </div>
          <div>
-            <textarea name="message" rows="6" />
+            <textarea name="message" rows="6" onChange={e => textareaHandler(e)} value={textarea} className={`${textarea === '' ? 'empty' : 'notEmpty'}`} />
             <label>Message</label>
          </div>
          <button disabled={!formValid} type="submit" >Send</button>

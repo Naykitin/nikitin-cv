@@ -16,7 +16,7 @@ function App() {
     <section className="work" id="work">
       <div className="wrapper">
         <h2>Work</h2>
-        <p className="work__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a iste repellat officia iure assumenda consequatur adipisci hic voluptatibus illo!</p>
+        <p className="work__description">A selection of works that I create in my spare time</p>
         <Work />
       </div>
     </section>

@@ -7,6 +7,28 @@ function Scroll() {
 
    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
    const FadeUp = batch(Fade(), Move(), Sticky());
+   const workExperience = [
+      {
+         name: 'Aweb Systens',
+         position: 'HTML Coder',
+         experience: 'February 2021 — March 2022',
+         tasks: 'Layout of pages, creation of adaptive, accordions and burger menus, connection and configuration of sliders, SEO optimization.'
+      },
+      {
+         name: 'Remote Helpers',
+         position: 'Front-end developer',
+         experience: 'April 2022 — present',
+         tasks: 'Optimizing the user experience, using HTML, JavaScript and CSS to bring concepts to life, developing and maintaining the user interface.'
+      }
+   ];
+   const education = [
+      {
+         name: 'Kharkiv National University Of Radio Electronics Automation and Computer-Integrated Technologies',
+         department: 'Automation and computer-integrated technologies',
+         years: 'September 2018 — December 2022',
+         degree: 'Master'
+      }
+   ]
 
   return (
    <ScrollContainer>
@@ -37,27 +59,44 @@ function Scroll() {
             <Animator animation={FadeUp}>
                   <div className="about__container">
                      <div className="container__img">
-                     <Animator animation={batch(MoveIn(0, -800), MoveOut(0, 800))}>
-                        <img src="/img/profile-vlad.jpg" alt="cv" />
-                     </Animator>
+                        <Animator animation={batch(MoveIn(0, -800), MoveOut(0, 800))}>
+                           <img src="/img/profile-vlad.jpeg" alt="cv" />
+                        </Animator>
                      </div>
                      <div className="container__text">
 
                         <Animator animation={MoveOut(1000, 0)}> 
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, repudiandae.</p>
+                           <p>Hello! My name is Vlad, I'm a developer from Ukraine, looking for a full-time remote job.</p>
                         </Animator>
 
                         <Animator animation={MoveOut(-1000, 0)}>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur minima. Eius fugit rerum totam, non quo et itaque necessitatibus eos nemo!</p>
+                           <h3>Work experience</h3>
+                           {
+                              workExperience.map((work) => (
+                                 <ul className='workList'>
+                                    <li className='name'><span>{work.name}</span> ({work.position})</li>
+                                    <li className='experience'>{work.experience}</li>
+                                    <li className='tasks'>{work.tasks}</li>
+                                 </ul>
+                              ))
+                           }
                         </Animator>
 
                         <Animator animation={MoveIn(-1000, 0)}>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde odio modi error ipsa esse sapiente ducimus ea! Minima, quod?</p>
+                           <h3>Education</h3>
+                           {
+                              education.map((i) => (
+                                 <ul className='educationList'>
+                                    <li className='name'><span>{i.name}</span> ({i.department})</li>
+                                    <li className='info'>{i.years} | {i.degree}</li>
+                                 </ul>
+                              ))
+                           }
                         </Animator>
 
-                        <Animator animation={MoveIn(1000, 0)}>
+                        {/* <Animator animation={MoveIn(1000, 0)}>
                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum.</p>
-                        </Animator>
+                        </Animator> */}
 
                      </div>
                   </div>
