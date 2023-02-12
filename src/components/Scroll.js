@@ -5,6 +5,22 @@ import Skills from './Skills';
 
 function Scroll() {
 
+   const [windowSize, setWindowSize] = React.useState(getWindowSize());
+   React.useEffect(() => {
+      function handleWindowResize() {
+         setWindowSize(getWindowSize());
+      }
+      window.addEventListener('resize', handleWindowResize);
+      return () => {
+         window.removeEventListener('resize', handleWindowResize);
+      };
+   }, []);
+   
+   function getWindowSize() {
+      const {innerWidth, innerHeight} = window;
+      return {innerWidth, innerHeight};
+    }
+
    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
    const FadeUp = batch(Fade(), Move(), Sticky());
    const workExperience = [
@@ -52,28 +68,29 @@ function Scroll() {
             </Animator>
          </section>
       </ScrollPage>
-      
+     
       <ScrollPage>
          <div id="about"></div>
          <section className="about">
             <Animator animation={FadeUp}>
                   <div className="about__container">
-                     <div className="container__img">
-                        <Animator animation={batch(MoveIn(0, -800), MoveOut(0, 800))}>
-                           <img src="/img/profile-vlad.jpeg" alt="cv" />
-                        </Animator>
-                     </div>
+                     {windowSize.innerWidth <= 768 ? <></> :
+                        <div className="container__img">
+                           <Animator animation={batch(MoveIn(0, -800), MoveOut(0, 800))}>
+                              <img src="/img/profile-vlad.jpeg" alt="cv" />
+                           </Animator>
+                        </div>
+                     }
                      <div className="container__text">
-
-                        <Animator animation={MoveOut(1000, 0)}> 
+                        <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(0, 100), MoveOut(800, 0)) : MoveOut(1000, 0)}> 
                            <p>Hello! My name is Vlad, I'm a developer from Ukraine, looking for a full-time remote job.</p>
                         </Animator>
 
-                        <Animator animation={MoveOut(-1000, 0)}>
+                        <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(0, 100), MoveOut(-3000, 0), FadeOut) : MoveOut(-1000, 0)}>
                            <h3>Work experience</h3>
                            {
-                              workExperience.map((work) => (
-                                 <ul className='workList'>
+                              workExperience.map((work, index) => (
+                                 <ul className='workList' key={index}>
                                     <li className='name'><span>{work.name}</span> ({work.position})</li>
                                     <li className='experience'>{work.experience}</li>
                                     <li className='tasks'>{work.tasks}</li>
@@ -82,28 +99,23 @@ function Scroll() {
                            }
                         </Animator>
 
-                        <Animator animation={MoveIn(-1000, 0)}>
+                        <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(-1000, 0), MoveOut(0, -800)) : MoveIn(-1000, 0)}>
                            <h3>Education</h3>
                            {
-                              education.map((i) => (
-                                 <ul className='educationList'>
+                              education.map((i, index) => (
+                                 <ul className='educationList' key={index}>
                                     <li className='name'><span>{i.name}</span> ({i.department})</li>
                                     <li className='info'>{i.years} | {i.degree}</li>
                                  </ul>
                               ))
                            }
                         </Animator>
-
-                        {/* <Animator animation={MoveIn(1000, 0)}>
-                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis sint sunt, ratione corrupti odio repudiandae et dignissimos dolorum.</p>
-                        </Animator> */}
-
                      </div>
                   </div>
             </Animator>
          </section>
       </ScrollPage>
-
+      
       <ScrollPage>
          <section className="skills" id="skills">
             <Animator animation={batch(Fade(), MoveIn(0, 1000), MoveOut(0, -500), Sticky())}>

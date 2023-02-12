@@ -311,6 +311,15 @@ textarea {
       }
     }
   }
+  @media (max-width: 425px) {
+    .skills__list {
+      gap: 0;
+      justify-content: flex-start;
+      .skills__item {
+        width: 50%;
+      }
+    }
+  }
 }
 @media (min-width: 320px) {
   .about > div, 
@@ -491,6 +500,15 @@ textarea {
           width: 100%;
           background-color: transparent;
           z-index: 9;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px rgb(40 31 12) inset !important;
+        }
+        input:-webkit-autofill{
+          -webkit-text-fill-color: #fff !important;
         }
         input:focus + label,
         textarea:focus + label {

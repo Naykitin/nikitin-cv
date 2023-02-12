@@ -58,8 +58,8 @@ function Work() {
                   <div className="item__img">
                      <SlideshowLightbox theme="lightbox" className='lightbox'>
                         {
-                           obj.image.map((i) => {
-                              return <img src={i} alt={obj.heading} />
+                           obj.image.map((i, index) => {
+                              return <img src={i} alt={obj.heading} key={index}/>
                            })
                         }
                      </SlideshowLightbox>

@@ -22,13 +22,13 @@ const ContactForm = () => {
        .then((result) => {
            console.log(result.text);
            if (result = 'OK') {
-            setResult('Message successfully sent :)');
+            setResult('Message successfully sent 👌');
            } else {
-            setResult('Something went wrong :(');
+            setResult('Something went wrong 😔');
            }
        }, (error) => {
            console.log(error.text);
-       }).then(setFlip(true));
+       }).then(setFlip(true)).then(setName('')).then(setEmail('')).then(setTextarea(''));
    };
 
    useEffect(() => {
