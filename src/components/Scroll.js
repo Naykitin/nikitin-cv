@@ -25,7 +25,7 @@ function Scroll() {
    const FadeUp = batch(Fade(), Move(), Sticky());
    const workExperience = [
       {
-         name: 'Aweb Systens',
+         name: 'Aweb Systems',
          position: 'HTML Coder',
          experience: 'February 2021 — March 2022',
          tasks: 'Layout of pages, creation of adaptive, accordions and burger menus, connection and configuration of sliders, SEO optimization.'
@@ -42,7 +42,7 @@ function Scroll() {
          name: 'Kharkiv National University Of Radio Electronics',
          department: 'Automation and computer-integrated technologies',
          years: 'September 2018 — December 2022',
-         degree: 'Master'
+         degree: 'Master of Science'
       }
    ]
 
