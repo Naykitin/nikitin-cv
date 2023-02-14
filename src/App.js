@@ -24,7 +24,7 @@ function App() {
     <section className="contact" id="contact">
       <div className="wrapper">
         <h2>Contact</h2>
-        <p className="contact__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo neque error temporibus praesentium, voluptas reprehenderit cumque impedit molestiae dolore natus?</p>
+        <p className="contact__description">Fill free to send me email to say "Hi" or ask for my resume in the form below. I look forward to hearing from you!</p>
         <div className="contact__wrapper">
           <ContactForm />
           <div className="contact__social">

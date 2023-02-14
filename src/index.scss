@@ -537,6 +537,16 @@ textarea {
       }
       
     }
+    @media (max-width: 425px) {
+      .contact__form {
+        min-width: 380px;
+
+        input,
+        textarea {
+          font-size: 1.2rem;
+        }
+      }
+    }
     .contact__form.active {
       transform: rotateY(180deg);
 

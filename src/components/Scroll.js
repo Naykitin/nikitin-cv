@@ -39,7 +39,7 @@ function Scroll() {
    ];
    const education = [
       {
-         name: 'Kharkiv National University Of Radio Electronics Automation and Computer-Integrated Technologies',
+         name: 'Kharkiv National University Of Radio Electronics',
          department: 'Automation and computer-integrated technologies',
          years: 'September 2018 — December 2022',
          degree: 'Master'
