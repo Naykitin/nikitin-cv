@@ -52,7 +52,6 @@ function Work() {
                      <div className="item__btns">
                      {(obj.link === false ? <></> :  <a href={obj.link} target="_blank" rel="noreferrer">View site</a>)}
                      {(obj.github === false ? <></> :  <a href={obj.github} target="_blank" rel="noreferrer">View GitHub</a>)}
-                        
                      </div>
                   </div>
                   <div className="item__img">
