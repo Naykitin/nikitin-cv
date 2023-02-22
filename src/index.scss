@@ -225,23 +225,33 @@ textarea {
     .container__text {
       width: 70%;
 
-      .workList {
-        padding: 0;
-        margin-bottom: 2rem;
+      .workExperience {
+        max-height: 500px;
+        overflow: hidden;
+        transition: .5s all;
 
-        .name {
-          span{
-            font-weight: 800;
+        &.disable {
+          max-height: 0;
+        }
+
+        .workList {
+          padding: 0;
+          margin-bottom: 2rem;
+
+          .name {
+            span{
+              font-weight: 800;
+            }
           }
-        }
-        .experience {
-          font-size: 0.875rem;
-          font-weight: 400;
-          font-style: italic;
-          margin-bottom: .5rem;
-        }
-        .tasks {
-          font-size: 1.2rem;
+          .experience {
+            font-size: 0.875rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: .5rem;
+          }
+          .tasks {
+            font-size: 1.2rem;
+          }
         }
       }
       .educationList {
@@ -257,6 +267,38 @@ textarea {
           font-weight: 400;
           font-style: italic;
           margin-bottom: 1rem;
+        }
+      }
+
+      .aboutModal {
+        max-height: 0;
+        overflow: hidden;
+        transition: .5s all;
+
+        &.active {
+          max-height: 500px;
+        }
+        p {
+          margin: 0 0 1rem;
+        }
+      }
+
+      button {
+        width: 6rem;
+        height: 2rem;
+        margin: 0 auto 1.5rem;
+        border: 2px solid silver;
+        background-color: transparent;
+        color: #fff;
+        font-size: .8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s all;
+
+        &:hover {
+          transform: translate(-2px, -2px);
+          box-shadow: 4px 4px 0px 0px #fff;
         }
       }
     }

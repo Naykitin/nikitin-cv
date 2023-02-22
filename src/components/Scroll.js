@@ -6,6 +6,7 @@ import Skills from './Skills';
 function Scroll() {
 
    const [windowSize, setWindowSize] = React.useState(getWindowSize());
+   const [modal, setModal] = React.useState(false);
    React.useEffect(() => {
       function handleWindowResize() {
          setWindowSize(getWindowSize());
@@ -15,6 +16,10 @@ function Scroll() {
          window.removeEventListener('resize', handleWindowResize);
       };
    }, []);
+
+   const popupModal = (state) => {
+      setModal(state);
+   }
    
    function getWindowSize() {
       const {innerWidth, innerHeight} = window;
@@ -84,21 +89,39 @@ function Scroll() {
                      <div className="container__text">
                         <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(0, 100), MoveOut(800, 0)) : MoveOut(1000, 0)}> 
                            <p>Hello! My name is Vlad, I'm a developer from Ukraine, looking for a full-time remote job.</p>
+                           <div className={`aboutModal ${ modal ? 'active' : ''}`}>
+                              <p>
+                                 Aweb Systems(HTML Coder) - February 2021 — March 2022<br/>
+                                 I mainly worked with popular CMS (Worpress, Bitrix, Joomla, OpenCart, ModX), especially with wordpress.<br/>
+                                 The main tasks that I performed were page layout, adaptive creation, website redesign, Seo optimization.
+                              </p>
+                              <p>
+                                 Remote Helpers(front-end) - April 2022 — present<br/>
+                                 Now I am working as junior frontend developer.<br/>
+                                 Developed several wordpress web applications for recruitment remote employees. Worked with a team for another wordpress project, an updated and improved version of this company website.<br/>
+                                 Currently hired as a developer in an Israeli company. Developed landing pages, wordPress sites, worked with different trackers.
+                              </p>
+                           </div>
+                           <button onClick={() => popupModal(!modal)}>
+                              {modal ? 'See less' : 'See more...'}
+                           </button>
+
                         </Animator>
 
-                        <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(0, 100), MoveOut(-3000, 0), FadeOut) : MoveOut(-1000, 0)}>
-                           <h3>Work experience</h3>
-                           {
-                              workExperience.map((work, index) => (
-                                 <ul className='workList' key={index}>
-                                    <li className='name'><span>{work.name}</span> ({work.position})</li>
-                                    <li className='experience'>{work.experience}</li>
-                                    <li className='tasks'>{work.tasks}</li>
-                                 </ul>
-                              ))
-                           }
-                        </Animator>
-
+                        <div className={`workExperience ${ modal ? 'disable' : ''}`}>
+                           <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(0, 100), MoveOut(-3000, 0), FadeOut) : MoveOut(-1000, 0)}>
+                              <h3>Work experience</h3>
+                              {
+                                 workExperience.map((work, index) => (
+                                    <ul className='workList' key={index}>
+                                       <li className='name'><span>{work.name}</span> ({work.position})</li>
+                                       <li className='experience'>{work.experience}</li>
+                                       <li className='tasks'>{work.tasks}</li>
+                                    </ul>
+                                 ))
+                              }
+                           </Animator>
+                        </div>
                         <Animator animation={windowSize.innerWidth <= 768 ? batch(MoveIn(-1000, 0), MoveOut(0, -800)) : MoveIn(-1000, 0)}>
                            <h3>Education</h3>
                            {
@@ -110,6 +133,7 @@ function Scroll() {
                               ))
                            }
                         </Animator>
+                        
                      </div>
                   </div>
             </Animator>
